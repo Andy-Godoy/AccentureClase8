@@ -7,7 +7,7 @@ public class Init {
     public static void main(String[] args) {
         sensorvelocidad.Sensor sensorvelocidad = Factory.crearSensorVelocidad();
         sensorclima.Sensor sensorclima = Factory.crearSensorClima();
-        Procesador procesador = Factory.crearProcesador();
+        Procesable procesador = Factory.crearProcesador();
         
         while (true) {
             DatosVehiculo datosVehiculo = sensorvelocidad.sensarVehiculo();

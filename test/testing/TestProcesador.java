@@ -54,6 +54,7 @@ public class TestProcesador {
         
         DatosVehiculo datosvehiculo = new DatosVehiculo();
         datosvehiculo.tipoVehiculo = TipoVehiculo.Auto;
+        datosvehiculo.velocidadMedida = 100;
         
         procesador.procesar(datosvehiculo, TipoClima.NORMAL, false);
         Assert.assertEquals(true, generadorTicketMock.isTicketGenerado());
