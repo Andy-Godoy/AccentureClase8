@@ -49,7 +49,7 @@ public class TestProcesador {
         GeneradorTicketMock generadorTicketMock = 
                 new GeneradorTicketMock();
         
-        Procesador procesador = 
+        Procesador procesador =
                 new Procesador(generadorTicketMock);
         
         DatosVehiculo datosvehiculo = new DatosVehiculo();

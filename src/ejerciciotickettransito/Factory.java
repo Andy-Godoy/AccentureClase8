@@ -12,8 +12,8 @@ public class Factory {
     public static Procesador crearProcesador() {
         GeneradorTicket generadorTicket = 
                 new GeneradorTicketTxt(
-                        z -> "",
-                        "C:\\tickets"
+                        z -> new com.google.gson.Gson().toJson(z),
+                        "C:\\tickets\\"
                 );
         
         return new Procesador(generadorTicket);

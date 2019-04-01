@@ -17,9 +17,13 @@ public class Procesador {
                 Boolean esSabado) {
         
         // Aca iria la logica
-        
-        // si corresponde generadorTicket
-        generadorTicket.generar(new Ticket());
-        
+        int limite = Limites.obtenerLimite(
+                datosvehiculo.tipoVehiculo, 
+                tipoClima);
+
+        if (datosvehiculo.velocidadMedida > limite) {
+            Ticket t = new Ticket(datosvehiculo, 1000);
+            generadorTicket.generar(t);
+        }
     }
 }
